@@ -1,0 +1,13 @@
+{
+  "name": "lintify-api-example",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Lintify API example",
+  "scripts": {
+    "js": "node scripts/bundle.js"
+  },
+  "dependencies": {
+    "browserify": "^9.0.3",
+    "mkdirp": "^0.5.0"
+  }
+}
