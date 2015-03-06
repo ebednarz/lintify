@@ -10,15 +10,15 @@
 
 ### Before
 
- 1. *someone* creates CI job
- 2. *someone* configures Checkstyle plugin for CI job
- 3. *someone* configures JSHint to create Checkstyle format report
- 4. *developer* saves silly source file
- 5. *developer* commits silly source file to VCS
- 6. *developer* pushes VCS commit to remote
- 7. remote pushes notification to CI server
- 8. CI server pulls in VCS changes
- 9. CI server builds browserify bundle
+1. *someone* creates CI job
+2. *someone* configures Checkstyle plugin for CI job
+3. *someone* configures JSHint to create Checkstyle format report
+4. *developer* saves silly source file
+5. *developer* commits silly source file to VCS
+6. *developer* pushes VCS commit to remote
+7. remote pushes notification to CI server
+8. CI server pulls in VCS changes
+9. CI server builds browserify bundle
 10. CI server passes bundle to JSHint
 11. JSHint generates Checkstyle report
 12. CI server aborts build
