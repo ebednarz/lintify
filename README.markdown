@@ -35,7 +35,7 @@
 
 ### Wait! Couldn't *developer* run JSHint herself?
 
-That's what I used to think! 
+That's what *I* used to think! 
 It turns out, however, that the answer to that question is **no**.
 
 ## Options
