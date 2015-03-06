@@ -1,4 +1,4 @@
-# Lintify
+# lintify [![npm version][npm-image]][npm-url]
 
 > Browserify transform to abort bundling silly source files.
 
@@ -61,3 +61,6 @@ It turns out, however, that the answer to that question is **no**.
 ## License
 
 MIT
+
+[npm-image]: https://img.shields.io/npm/v/lintify.svg?style=flat-square
+[npm-url]: https://www.npmjs.com/package/lintify
