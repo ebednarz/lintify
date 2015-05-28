@@ -17,6 +17,7 @@
   ],
   "license": "MIT",
   "dependencies": {
+    "is-package-file": "0.0.3",
     "jshint": "^2.6.0",
     "through2": "^0.6.3"
   }
