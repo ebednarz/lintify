@@ -11,8 +11,8 @@ function bufferFactory(file, options) {
         var source = buffer.toString('utf8');
 
         if ('production' == process.env.NODE_ENV) {
-            lintrc.debug = false;
-            lintrc.devel = false;
+            options.lintrc.debug = false;
+            options.lintrc.devel = false;
         }
 
         jshint(source, options.lintrc);

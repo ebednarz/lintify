@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "browserify": "^9.0.3",
+    "lintify": "^0.0.3",
     "mkdirp": "^0.5.0"
   }
 }
