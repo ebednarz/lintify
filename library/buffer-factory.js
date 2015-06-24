@@ -5,7 +5,8 @@ var eslintrc = require('./configuration');
 function bufferFactory(file, options) {
     function onLintError(error) {
         var location = [error.line, error.column].join(':');
-        options.errors.each(location, error.message);
+        var url = 'http://eslint.org/docs/rules/'+ error.ruleId;
+        options.errors.each(location, error.message, error.source, url);
     }
 
     function setBuffer(buffer, encoding, next) {
@@ -28,9 +29,6 @@ function bufferFactory(file, options) {
             });
         }
 
-        //if (jshint.errors.length) {
-        //}
-        //
         this.push(source);
         next();
     }
