@@ -1,5 +1,5 @@
 'use strict';
-var bufferFactory = require('./library/bufferFactory');
+var bufferFactory = require('./library/buffer-factory');
 var isPackageFile = require('is-package-file');
 var path = require('path');
 var through2 = require('through2');
