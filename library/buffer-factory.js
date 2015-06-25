@@ -1,6 +1,6 @@
 'use strict';
 var linter = require('eslint').linter;
-var config = require('./configuration');
+var configuration = require('./configuration');
 
 var ESLINT_RULES_URL = 'http://eslint.org/docs/rules/';
 
