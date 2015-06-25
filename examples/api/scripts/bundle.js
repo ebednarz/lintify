@@ -12,8 +12,8 @@ browserify()
             head: function (file) {
                 console.error('file:', file);
             },
-            each: function (position, reason) {
-                console.error(position, reason);
+            each: function (position, reason, source, url) {
+                console.error(position, reason, source, url);
             },
             tail: function () {
                 console.error('bundle: beep');

@@ -11,14 +11,7 @@ function bufferFactory(file, options) {
 
     function setBuffer(buffer, encoding, next) {
         var source = buffer.toString('utf8');
-        var errors;
-
-        //if ('production' == process.env.NODE_ENV) {
-        //    options.lintrc.debug = false;
-        //    options.lintrc.devel = false;
-        //}
-
-        errors = linter.verify(source, eslintrc);
+        var errors = linter.verify(source, eslintrc);
 
         if (errors.length) {
             options.errors.head(file);
