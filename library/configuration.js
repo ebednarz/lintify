@@ -1,8 +1,17 @@
 'use strict';
-var defaultConfiguration = require('../data/eslintrc');
-var packageName = require('../package').name;
 var merge = require('lodash.merge');
-var packageConfiguration = require('reverse-config')[packageName];
-var config = merge({}, defaultConfiguration, packageConfiguration);
+var path = require('path');
+var processPackage = require(path.join(process.cwd(), 'package'));
 
-module.exports = config;
+var packageConfiguration = processPackage.eslintConfig || {};
+var sharedConfiguration = {};
+var configuration;
+
+if (packageConfiguration.extends) {
+    sharedConfiguration = require(packageConfiguration.extends);
+    delete packageConfiguration.extends;
+}
+
+configuration = merge(sharedConfiguration, packageConfiguration);
+
+module.exports = configuration;

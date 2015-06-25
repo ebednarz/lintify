@@ -1,17 +1,19 @@
 'use strict';
 var linter = require('eslint').linter;
-var eslintrc = require('./configuration');
+var config = require('./configuration');
+
+var ESLINT_RULES_URL = 'http://eslint.org/docs/rules/';
 
 function bufferFactory(file, options) {
     function onLintError(error) {
         var location = [error.line, error.column].join(':');
-        var url = 'http://eslint.org/docs/rules/'+ error.ruleId;
+        var url = ESLINT_RULES_URL + error.ruleId;
         options.errors.each(location, error.message, error.source, url);
     }
 
     function setBuffer(buffer, encoding, next) {
         var source = buffer.toString('utf8');
-        var errors = linter.verify(source, eslintrc);
+        var errors = linter.verify(source, configuration);
 
         if (errors.length) {
             options.errors.head(file);
