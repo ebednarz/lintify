@@ -17,7 +17,7 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "eslint": "^0.23.0",
+    "eslint": "^0.24.1",
     "is-package-file": "0.0.3",
     "lodash.merge": "^3.3.1",
     "reverse-config": "0.0.3",

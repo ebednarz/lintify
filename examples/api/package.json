@@ -1,6 +1,6 @@
 {
   "name": "lintify-api-example",
-  "version": "0.0.1",
+  "version": "0.1.2",
   "private": true,
   "description": "Lintify API example",
   "scripts": {
